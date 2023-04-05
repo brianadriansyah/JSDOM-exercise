@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 4 - 6 DOM</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Button Tema</h1>
+    <button id="btnColor" onclick="changeTheme()">Klik Warna Gelap</button>
+    <button id="btnColor2" onclick="defaultTheme()">Klik Warna Terang</button>
+    <button id="btnColor3" onclick="off()">Kunci</button>
+    <script>
+
+
+        //Section 6 - Manipulating Element's Styles (Style property)
+        function changeTheme() {
+            let btnColor = document.getElementById('btnColor');
+            let root = btnColor.parentNode.parentNode;
+            root.style.background = '#413543';
+        }
+
+        function defaultTheme() {
+            let btnColor = document.getElementById('btnColor');
+            let root = btnColor.parentNode.parentNode;
+            root.style.background = 'white';
+        }
+
+        //Section 5 - Working with Attributes (setAttribute())
+        function off(){
+            let btnColor3 = document.querySelector('#btnColor3');
+            if(btnColor3) {
+            btnColor3.setAttribute('name', 'send');
+            btnColor3.setAttribute('disabled', '');
+            alert('Tombol dimatikan');
+        }
+    }
+    </script>
+</body>
+
+</html>

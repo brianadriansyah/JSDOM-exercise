@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 8</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Radio Button</h1>
+
+    <p>Jenis Kelamin : <input type="radio" name="jk" value="laki-laki" id="cowo" required>
+        Laki - Laki
+        <input type="radio" name="jk" value="perempuan" id="cewe" />
+        Perempuan <br></p>
+    <button id="btn">Klik Disini</button>
+    <p id="output"></p>
+    <script>
+        //Section 8
+        let btn = document.querySelector('#btn');
+        const radioButtons = document.querySelectorAll('input[name="jk"]');
+        btn.addEventListener("click", () => {
+            let gender;
+            for (const radioButton of radioButtons) {
+                if (radioButton.checked) {
+                    gender = radioButton.value;
+                    break;
+                }
+            }
+            output.innerText = gender ? `Anda ${gender}` : `Anda belum memilih jenis kelamin`;
+        });
+    </script>
+</body>
+
+</html>

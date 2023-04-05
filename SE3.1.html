@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 2 - 4 DOM</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Form isi</h1>
+    <div class="description">
+        <p>Silahkan isi Form di bawah ini</p>
+    </div>
+
+    <fieldset>
+        <p>Nama : <input type="text" id="nama" required></p>
+        <p>Alamat : <input type="text" id="alamat" required></p>
+        <button id="submit">Kirim</button>
+    </fieldset>
+    <script>
+        //Section 2 - Selecting elements (querySelector())
+        const description = document.querySelector('p');
+
+        //Section 3 - Traversing elements (Get parent element)
+        const root = description.parentNode.parentNode;
+        root.style.background = '#F1F6F5';
+
+        //Section 4 Manipulating elements (innerHTML)
+        description.innerHTML += '. Harap isi dengan benar';
+    </script>
+</body>
+
+</html>
